@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.0
+    command: [ "--notify-keyspace-events", "KEx" ]
+    volumes:
+      - '/data'
+    ports:
+      - '6379:6379'
